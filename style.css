@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+html {
+    font-size: 10px;
+    }
+
+.header {
+    padding: 20px 30px 20px 0;
+    background-color:rgb(127, 127, 127);
+    }
+
+body {
+    background-color:rgb(238, 208, 208);
+    }
+
+a {
+    text-decoration: none;
+    color: #121111;
+    }
+
+.logo {
+    font-size: 3rem;
+    padding: 40px;
+}
+
+.menu {
+    font-size: 2rem;
+    text-align: right;
+    }
+
+.menu__item:not(:last-child) {
+    margin-right: 30px;
+    }
+.site-search {
+    display: flex;
+    padding-left: 20px;
+}
+
+.site-search input {
+    border: 1px solid var(--gray);
+    border-radius: 4px 0 0 4px;
+    margin-right: 10px;
+  }
+  
+  .site-search button {
+    background: var(--peach);
+    border: 1px solid var(--gray);
+    -webkit-text-stroke: 1px var(--peach);
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+  }
+
+.container {
+    text-align: center;
+}
+
+.footer__time{
+    padding:20px
+}
+.social {
+    font-size: 2rem;
+  }
+
+.social__item:not(:last-child) {
+    margin-right: 15px;
+    }
+
+#nothing-found {
+    color: var(--dark);
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+#shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  .shop-item {
+    width: calc(25% - 17px);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid ;
+  }
+  
+  .shop-item .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
+  
+  .shop-item img {
+    width: 70%;
+    height: 200px;
+    flex-shrink: 3;
+    object-fit: cover;
+  }
+  
+  .shop-item h1 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  
+  .shop-item p {
+    margin-top: 0;
+  }
+  
+  .shop-item .price {
+    background-color: var(--peach);
+    padding: 4px 8px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+  }
+  
+  .shop-item .tags {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .shop-item .tag {
+    background: var(--yellow);
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }

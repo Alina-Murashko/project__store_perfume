@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset=UTF-8>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/1e3dbd0f65.js" crossorigin="anonymous"></script>
+		<title>Store Perfume</title>
+	</head>
+    <body>
+		<header class="header"> 
+			<a class="logo" href="#block-header">Perfume</a>
+				<nav class="menu">
+					<a class="menu__item" href="#about-shop">О магазине</a>	
+					<a class="menu__item" href="#catalog">Меню</a>
+					<a class="menu__item" href="#contacts">Контакты</a>
+				</nav>	
+                <div class="site-search">
+                    <input type="search" id="search-input">
+            		<button type="button" id="search-btn" class="fa fa-search"></i>
+                </div>
+		</header>
+		<main class="container">
+			<div class="filters">
+				<div class="filters-sort">
+				  <label for="sort">Сортировка:</label>
+				  <select name="sort" id="sort">
+					<option selected value="alphabet">По алфавиту</option>
+					<option value="expensive">Сначала дорогие</option>
+					<option value="cheap">Сначала дешевые</option>
+					<option value="rating">Рейтинг</option>
+				  </select>
+				</div>
+			</div>
+            <section id="shop-items">
+            </section>
+            <p id="nothing-found"></p>
+          </main>
+          <footer id="contacts" class="container">
+            <p class="footer__time">Мы открыты ежедневно в 12:00 - 12:00</p>
+			<div class="social">
+				<a class="social__item" href="https://ru-ru.facebook.com/" title="Сссылка на социальную сеть facebook"><i class="fa-brands fa-facebook"></i></a>
+				<a class="social__item" href="https://twitter.com/" title="Сссылка на социальную сеть twitter"><i class="fa-brands fa-twitter"></i></a>
+				<a class="social__item" href="https://www.instagram.com/" title="Сссылка на социальную сеть instagram"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+          </footer>
+          <template id="item-template">
+            <div class="shop-item">
+              <img src="">
+              <div class="content">
+                <div class="tags"></div>
+                <h1></h1>
+                <p></p>
+                <span class="price"></span>
+				<span class="rating"></span>
+              </div>
+            </div>
+          </template>
+          <script src="script.js"></script>
+	</body>
+</html>
