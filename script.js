@@ -100,8 +100,6 @@ return templateItem;
 
 }
 
-
-
 let currentState = [...items];
 
 function renderItems(arr) {
@@ -158,6 +156,7 @@ renderItems(currentState.sort((a,b) => sortByAlphabet(a,b)));
  });
 
  const searchInput = document.querySelector('#search-input');
+ 
  const searchButton = document.querySelector('#search-btn');
  
  function applySearch() {
