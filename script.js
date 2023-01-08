@@ -96,7 +96,7 @@ for (let i = 0; i < rating; i++ ) {
   ratingHolder.append(star);
 }
 
-return itemShop;
+return templateItem;
 
 }
 
@@ -105,17 +105,19 @@ return itemShop;
 let currentState = [...items];
 
 function renderItems(arr) {
-  nothingFound.textContent = '';
   containerItems.innerHTML = '';
+  nothingFound.textContent = '';
+  
   arr.forEach(item => {
     containerItems.append(templateCardAdd(item))
   });
   if (!arr.length) {
     nothingFound.textContent = 'Ничего не найдено';
+    containerItems.append(nothingFound);
   }
 }
 
-renderItems(currentState.sort((a,b) => sortByAlphabet(a,b)));
+renderItems(currentState);
 
 function sortByAlphabet(a,b) {
   if (a.title > b.title) {
@@ -126,6 +128,9 @@ function sortByAlphabet(a,b) {
   } 
     return 0;
 }
+
+renderItems(currentState.sort((a,b) => sortByAlphabet(a,b)));
+
 
  const sortControl = document.querySelector('#sort');
 
@@ -156,18 +161,18 @@ function sortByAlphabet(a,b) {
  const searchButton = document.querySelector('#search-btn');
  
  function applySearch() {
-  const searchString = searchInput.value.trim().toLowerCase;
+  const searchString = searchInput.value.trim().toLowerCase();
 
   currentState = items.filter((el) => 
-  el.title.toLowerCase().includes(searchstring)
+  el.title.toLowerCase().trim().includes(searchString)
   );
 
-  currentState.sort((a, b) => sortByAlphabet(a,b)) 
+  currentState.sort((a, b) => sortByAlphabet(a,b));
   sortControl.selectedIndex = 0;
 
   renderItems(currentState);
 
  }
 
- searchInput.addEventListener('click', applySearch);
- searchButton.addEventListener('search', applySearch);
+ searchInput.addEventListener('search', applySearch);
+ searchButton.addEventListener('click', applySearch);
